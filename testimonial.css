@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-content: center;
+}
+.testimonial{
+    max-width: 1440px;
+    padding: 20px;
+    background-color: grey;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    'header header header header'
+    'box1 box1 box2 box5'
+    'box3 box4 box4 box5'
+    'footer footer footer footer';
+}
+.box{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: grid;
+    gap: 20px;
+}
+figure>div{
+    display: flex;
+    gap: 10px;
+}
+figure>div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid purple;
+}
+.verified{
+    font-size: 16px;
+    color: black;
+}
+.verified p{
+    font-weight:bold;
+    opacity: 50%;
+}
+figure p{
+    font-weight: bold;
+}
+figure p:nth-of-type(2){
+    opacity: 70%;
+    margin-top: 10px;
+}
+.testimonial1{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 70px;
+    color: white;
+    grid-area: box1;
+}
+.testimonial1 div{
+    color: rgb(240, 237, 237) ;
+}
+.testimonial2{
+    grid-area: box2;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+.testimonial2 div{
+    color: rgb(240, 237, 237) ;
+}
+.testimonial4{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+.testimonial4 div{
+    color: rgb(240, 237, 237);
+}
+.num1{grid-area: header;}
+.attribution a{
+    text-decoration: none;
+}
+.testimonial3{grid-area: box3;}
+.testimonial4{grid-area: box4;}
+.testimonial5{grid-area: box5;}
+.num2{grid-area: footer;}
+.attribution{
+    
+    background-color:
+    aliceblue;
+    height: 50px;
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .testimonial{
+        width: 100%;
+        grid-template-areas:
+        'header header header header'
+        'box1 box1 box1 box1'
+        'box2 box2 box2 box2'
+        'box3 box3 box3 box3'
+        'box4 box4 box4 box4'
+        'box5 box5 box5 box5'
+        'footer footer footer footer';
+    }
+    .num1{grid-area: header;}
+    .testimonial1{grid-area: box1;width: 100%;}
+    .testimonial2{grid-area: box2;width: 100%;}
+    .testimonial3{grid-area: box3;width: 100%;}
+    .testimonial4{grid-area: box4;width: 100%;}
+    .testimonial5{grid-area: box5;width: 100%;}
+    .num2{grid-area: footer;width: 100%;}
+}
